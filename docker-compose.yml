@@ -1,0 +1,16 @@
+services:
+
+  db:
+    image: postgres
+    restart: always
+    
+    shm_size: 128mb
+
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: e_com_predictor
+
+      
+    ports:
+      - 5432:5432

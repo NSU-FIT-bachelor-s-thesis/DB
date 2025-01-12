@@ -2,6 +2,7 @@ CREATE TABLE product_data (
     id BIGSERIAL PRIMARY KEY,
     product_id BIGINT NOT NULL,
     option_id BIGINT NOT NULL,
+    is_described BOOLEAN NOT NULL,
     link TEXT,
     category TEXT,
     additional_info TEXT,

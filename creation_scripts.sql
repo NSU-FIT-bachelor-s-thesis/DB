@@ -3,7 +3,6 @@ CREATE TABLE product_data (
     product_id BIGINT NOT NULL,
     option_id BIGINT NOT NULL,
     is_described BOOLEAN NOT NULL,
-    link TEXT,
     category TEXT,
     additional_info TEXT,
     count_of_users BIGINT CHECK (count_of_users >= 0),

@@ -17,6 +17,7 @@ CREATE TABLE product_statistics (
     measurement_time BIGINT NOT NULL,
     STATE VARCHAR(20),
     RATING INT,
-    TOTAL_PRICE BIGINT
+    TOTAL_PRICE BIGINT,
+    FOREIGN KEY (traveler_id) REFERENCES traveler(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 

@@ -9,7 +9,7 @@ CREATE TABLE product_data (
                               product_id BIGINT NOT NULL,
                               option_id BIGINT NOT NULL,
                               is_described BOOLEAN NOT NULL DEFAULT FALSE,
-                              category TEXT CHECK (char_length(category) <= 255),
+                              category TEXT CHECK (char_length(category) <= 500),
                               additional_info TEXT,
                               count_of_users BIGINT DEFAULT 0 CHECK (count_of_users >= 0),
                               PRIMARY KEY (product_id, option_id)

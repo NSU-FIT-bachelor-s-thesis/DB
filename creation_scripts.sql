@@ -23,7 +23,7 @@ CREATE TABLE product_statistics (
                                     measurement_time BIGINT NOT NULL CHECK (measurement_time > 0),
                                     state product_state NOT NULL DEFAULT 'active',
                                     rating INT DEFAULT 0 CHECK (rating BETWEEN 0 AND 5),
-                                    product_price BIGINT DEFAULT 0 CHECK (total_price >= 0),
+                                    product_price BIGINT DEFAULT 0 CHECK (product_price >= 0),
                                     FOREIGN KEY (product_id, option_id) REFERENCES product_data (product_id, option_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
